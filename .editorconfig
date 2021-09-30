@@ -1,0 +1,11 @@
+root = true
+
+[*]
+ident_style = tab
+indent_size = 1
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_nerline = true
+
+[*.md]
+trim_trailing_whitespace = false

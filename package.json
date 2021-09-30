@@ -1,0 +1,24 @@
+{
+  "name": "mayuko-twitch",
+  "version": "1.0.0",
+  "description": "Mayuko for Twitch",
+  "main": "src",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avellea/mayuko-twitch.git"
+  },
+  "author": "Avellea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Avellea/mayuko-twitch/issues"
+  },
+  "homepage": "https://github.com/Avellea/mayuko-twitch#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "tmi.js": "^1.8.5"
+  }
+}
