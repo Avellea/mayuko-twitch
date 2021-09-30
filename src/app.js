@@ -25,14 +25,12 @@ function initBot() {
 }
 
 function sendAutoMsg(channel) {
-	const keys = Object.keys(msgFile);
-	const randIndex = Math.floor(Math.random() * keys.length);
-	const randKey = keys[randIndex];
-	const name = msgFile[randKey];
-
-	client.say(client.channels[0], name)
-
-	// console.log(randKey);
+    const keys = Object.keys(msgFile);
+    const randIndex = Math.floor(Math.random() * keys.length);
+    const randKey = keys[randIndex];
+    const name = msgFile[randKey];  
+    client.say(client.channels[0], name)    
+    // console.log(randKey);
 }
 
 
