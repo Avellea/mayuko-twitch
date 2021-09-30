@@ -5,15 +5,15 @@ const msgFile = require('../assets/messages.json');
 
 const options = {
     options: { debug: true, messagesLogLevel: "info" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: BOT_USERNAME,
-		password: OAUTH_TOKEN
-	},
-	channels: [ CHANNEL_NAME ]
+        connection: {
+            reconnect: true,
+            secure: true
+        },
+        identity: {
+            username: BOT_USERNAME,
+            password: OAUTH_TOKEN
+        },
+    channels: [ CHANNEL_NAME ]
 }
 
 const client = new tmi.Client(options);
@@ -62,10 +62,10 @@ function checkTwitchChat(userstate, message, channel) {
     let shouldSendMessage = false
     shouldSendMessage = BLOCKED_WORDS.some(blockedWord => message.includes(blockedWord.toLowerCase()))
     if (shouldSendMessage) {
-      // tell user
-      client.say(channel, `@${userstate.username}, sorry! Your message was deleted.`)
-      // delete message
-      client.deletemessage(channel, userstate.id)
+        // tell user
+        client.say(channel, `@${userstate.username}, sorry! Your message was deleted.`)
+        // delete message
+        client.deletemessage(channel, userstate.id)
     }
 }
 
