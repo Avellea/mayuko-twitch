@@ -5,14 +5,14 @@ const msgFile = require('../assets/messages.json');
 
 const options = {
     options: { debug: true, messagesLogLevel: "info" },
-        connection: {
-            reconnect: true,
-            secure: true
-        },
-        identity: {
-            username: BOT_USERNAME,
-            password: OAUTH_TOKEN
-        },
+    connection: {
+        reconnect: true,
+        secure: true
+    },
+    identity: {
+        username: BOT_USERNAME,
+        password: OAUTH_TOKEN
+    },
     channels: [ CHANNEL_NAME ]
 }
 
