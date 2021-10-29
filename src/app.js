@@ -49,6 +49,8 @@ client.on('message', (channel, userstate, message, self) => {
     } else if (message.toLowerCase() === '!skin') {
         client.say(channel, `@${userstate.username}, https://github.com/Avellea/Avellea/blob/main/skins.md`)
         return;
+    } else if(message.toLowerCase() === '!discord') {
+        client.say(channel, `@${userstate.username}, https://discord.gg/gXdJHz45ZY`)
     }
 
     checkTwitchChat(userstate, message, channel)
@@ -57,7 +59,7 @@ client.on('message', (channel, userstate, message, self) => {
 
 
 function checkTwitchChat(userstate, message, channel) {
-    console.log(message)
+    // console.log(message)
     message = message.toLowerCase()
     let shouldSendMessage = false
     shouldSendMessage = BLOCKED_WORDS.some(blockedWord => message.includes(blockedWord.toLowerCase()))
