@@ -1,5 +1,6 @@
 import tmi from 'tmi.js'
-import { CHANNEL_NAME, BOT_USERNAME, OAUTH_TOKEN, BLOCKED_WORDS } from './constants';
+import { CHANNEL_NAME, BOT_USERNAME, OAUTH_TOKEN } from './constants';
+import { BLOCKED_WORDS } from './blocked';
 
 const msgFile = require('../assets/messages.json');
 
@@ -51,6 +52,10 @@ client.on('message', (channel, userstate, message, self) => {
         return;
     } else if(message.toLowerCase() === '!discord') {
         client.say(channel, `@${userstate.username}, https://discord.gg/gXdJHz45ZY`)
+    } else if(message.toLowerCase() === '727') {
+        client.say(channel, `WYSI`)
+    } else if(message.toLowerCase() === 'WYSI') {
+        client.say(channel, `727`)
     }
 
     checkTwitchChat(userstate, message, channel)

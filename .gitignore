@@ -16,3 +16,4 @@ cassettes
 oauth.txt
 config.json
 src/constants.js
+src/blocked.js
